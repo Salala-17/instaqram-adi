@@ -1,0 +1,123 @@
+/* Arxa plan animasiyası  */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+  }
+  
+  .background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #ff416c, #ff4b2b, #1e3c72, #2a5298);
+    background-size: 800% 800%;
+    animation: gradientMove 15s ease infinite;
+    z-index: -1;
+  }
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Kart konteyneri */
+  .container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Başlıq və alt yazı */
+  .title {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease forwards;
+  }
+  
+  .subtitle {
+    color: #f0f0f0;
+    margin-bottom: 30px;
+    animation: fadeInDown 1.5s ease forwards;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Linklər */
+  .insta-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .insta-btn {
+    background-color: #e1306c;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+    animation: fadeInUp 2s ease forwards;
+  }
+  
+  .insta-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  .insta-btn.gradient {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
+  
+  /* İkon animasiyası */
+  .spinning-icon {
+    animation: spin 5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Fade in yuxarıdan */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
